@@ -1,0 +1,24 @@
+<!--<div *ngFor="let item of [1,3,5,17,20]">
+    <p>Number is: {{ item }}</p>
+</div>-->
+<div *ngFor="let p of posts; let i = index">
+    <!--<p>{{ i }}</p>-->
+    <div class="post-container" [ngStyle]="{backgroundColor: i%2 === 0 ? '#F0D5E6' : '#E4C9DA'}">
+        <div class="image-container"><img [src]="p.imagen" alt="" style="max-height: 50px; max-width: 50px"></div>
+        <div>
+            <div class="name-container"><h6>{{ p.name }}</h6></div>
+            <div class="detailContainer">
+                <div class="details details-date">{{ p.fecha | date: "mediumDate" }}</div>
+                <div class="details details-author"><b>Autor: </b>{{ p.autor }}</div>
+                <div class="details" [ngStyle]="{color: p.tiempoLectura <= '13' ? '#9F7DC6' : '#8A799F'}"><b>Lectura: </b>{{ p.tiempoLectura }} minutos</div>
+            </div>
+        </div>
+        <div class="options">
+            <button class="btn btn-success">Mostrar detalles</button>
+            <button class="btn btn-warning" *ngIf="p.fecha <= today; else notifyme">Leer</button>
+            <ng-template #notifyme> <!--condition if ngIf returns false-->
+                <button class="btn btn-danger">Notificarme</button>
+            </ng-template>
+        </div>
+    </div>
+</div>

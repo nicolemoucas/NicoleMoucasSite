@@ -1,0 +1,16 @@
+.search-div{
+    margin : 10px 20px;
+    padding: 10px 20px;
+    width: 820px;
+}
+
+input[type=text]{
+    border: none;
+    height: 30px;
+    margin-left: 20px;
+    padding: 0px 5px;
+    width: 240px;
+}
+.changeBackground{
+    background-color: #FFEEF0;
+}

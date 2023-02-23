@@ -1,0 +1,17 @@
+.navbar{
+    background-color: #9f84bd;
+    display: flex;
+}
+.site-menu{
+    margin-left: 100px;
+    padding: 10px 30px;
+}
+.site-name{
+    color: #ede3e9;
+    padding: 10px 30px;
+}
+a{
+    color:#ede3e9;
+    margin: 0px 10px;
+    text-decoration: none;
+}
